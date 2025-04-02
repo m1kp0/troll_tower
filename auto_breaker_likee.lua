@@ -3,7 +3,7 @@ local chr = me.Character or me:WaitForChild("Character")
 local hrp = chr.HumanoidRootPart
 
 local function tp(cf)
-    hrp.CFrame = CFrame.new(cf)
+    hrp.CFrame = cf
 end
 
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/turtle"))()
@@ -19,3 +19,5 @@ Window:Toggle("Break parts", false, function(e)
         tp(-35, 103, 10)
     end
 end)
+
+-- loadstring(game:HttpGet("https://raw.githubusercontent.com/m1kp0/troll_tower/refs/heads/main/auto_breaker_likee.lua"))()
