@@ -50,7 +50,6 @@ Window:Toggle("Loop unfreeze", false, function(e)
         if me.Character ~= nil then 
             for i, v in pairs(me.Character:GetDescendants()) do
                 if v:IsA("BasePart") and v.Anchored then v.Anchored = false end
-                task.wait(0.1)
             end
         end
         task.wait(0.1)
