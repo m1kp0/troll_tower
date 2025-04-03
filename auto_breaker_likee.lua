@@ -37,7 +37,7 @@ Window:Toggle("Create my parts", false, function(e)
         end
     else
         for i, copy in pairs(workspace:GetDescendants()) do
-            if copy.Name == "LadderBreaker_defense_part" then
+            if copy:IsA("Part") and copy.Name == "LadderBreaker_defense_part" then
                 copy:Destroy()
             end
         end
