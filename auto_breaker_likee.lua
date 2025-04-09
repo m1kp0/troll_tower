@@ -46,18 +46,6 @@ local function manage_parts()
     end
 end
 
-local function unfreeze_player()
-    while loop_unfreeze_en do
-        if me.Character ~= nil then 
-            for i, v in pairs(me.Character:GetDescendants()) do
-                if v:IsA("BasePart") and v.Anchored then v.Anchored = false end
-                task.wait(0.1)
-            end
-        end
-        task.wait(0.1)
-    end
-end
-
 -- gui
 local Window = library:Window("LadderBreaker | TIAPT")
 
@@ -69,11 +57,6 @@ end)
 Window:Toggle("Create my parts", false, function(e)
     parts_en = e
     manage_parts()
-end)
-
-Window:Toggle("Loop unfreeze", false, function(e)
-    loop_unfreeze_en = e
-    unfreeze_player()
 end)
 
 Window:Label("Troll Is A Pinning Tower")
